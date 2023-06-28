@@ -1,0 +1,10 @@
+SELECT c.*
+FROM car c
+JOIN car_model cm ON c.material = cm.material
+JOIN part p ON cm.part_id_list LIKE CONCAT('%', p.id, '%')
+WHERE p.part_number in ('601000018AAANL')
+
+'601000085AAAGV',
+'601000667AAAGV',
+'601000560AAAGV',
+'601000662AAAGV'
